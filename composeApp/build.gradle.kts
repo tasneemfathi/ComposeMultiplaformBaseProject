@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -44,6 +45,13 @@ kotlin {
             implementation(libs.ui.tooling.preview)
             implementation(libs.android.accompanist)
             implementation(libs.android.splash.screen)
+
+            // DI with Koin
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
+
+            // Networking with Ktor
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -52,8 +60,22 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(libs.android.navigation)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+
+            // DI with Koin
+            api(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.composeVM)
+
+            // Networking with Ktor
+            implementation(libs.bundles.ktor)
+        }
+
+        nativeMain.dependencies {
+            // Networking with Ktor
+            implementation(libs.ktor.client.darwin)
         }
 
     }
