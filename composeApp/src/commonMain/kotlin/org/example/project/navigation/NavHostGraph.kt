@@ -3,7 +3,6 @@ package org.example.project.navigation
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import org.example.project.navigation.details.detailsNavigationHost
 import org.example.project.navigation.start.startNavigationHost
 
 
@@ -13,6 +12,5 @@ fun NavHostGraph(navController: NavHostController,
 
         NavHost(navController = navController, startDestination = startDestination.toString()){
              startNavigationHost(navController = navController)
-             detailsNavigationHost(navController = navController)
         }
 }

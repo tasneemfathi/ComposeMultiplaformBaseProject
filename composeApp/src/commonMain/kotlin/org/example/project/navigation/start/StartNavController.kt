@@ -4,6 +4,6 @@ import androidx.navigation.NavController
 import org.example.project.navigation.Destinations
 
 
-fun NavController.navigateToDetails(){
-    navigate(Destinations.DetailsScreen.toString())
+fun NavController.navigateToAddNew(){
+    navigate(Destinations.AddNewScreen.toString())
 }

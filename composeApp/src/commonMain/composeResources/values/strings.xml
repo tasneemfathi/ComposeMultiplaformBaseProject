@@ -1,0 +1,10 @@
+<resources>
+    <string name = "welcome_static_text" >Welcome Lets Start ... </string>
+    <string name = "users_title" >Users</string>
+    <string name = "for_more_info" >For More Info</string>
+    <string name = "scan_qr" >Scan QR</string>
+    <string name = "name" >Name</string>
+    <string name = "email" >Email</string>
+    <string name = "bio" >Bio</string>
+    <string name = "update" >Update</string>
+</resources>

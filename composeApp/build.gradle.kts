@@ -8,14 +8,15 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.google.services)
+
 }
 
 kotlin {
-
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
+            jvmTarget.set(JvmTarget.JVM_18)
         }
     }
     
@@ -25,6 +26,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
+            export(libs.kmpnotifier)
             baseName = "ComposeApp"
             isStatic = true
         }
@@ -39,7 +41,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(compose.material3)
-
+            implementation(libs.material3)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ui.tooling)
             implementation(libs.ui.tooling.preview)
@@ -60,6 +62,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
             implementation(libs.android.navigation)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
@@ -71,6 +74,23 @@ kotlin {
 
             // Networking with Ktor
             implementation(libs.bundles.ktor)
+
+            // AsyncImage with Coil
+            implementation(libs.bundles.coil)
+
+
+            // DataStore For LocalData
+            api(libs.datastore.preferences)
+            api(libs.datastore)
+            api(libs.kotlin.serialization)
+
+
+            // peekaboo-image-picker
+            implementation(libs.peekaboo.image.picker)
+
+            // notification library
+            api(libs.kmpnotifier)
+
         }
 
         nativeMain.dependencies {
@@ -107,8 +127,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
     buildFeatures {
         compose = true
