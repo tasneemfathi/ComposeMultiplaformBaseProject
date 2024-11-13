@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.mmk.kmpnotifier.extensions.onCreateOrOnNewIntent
 import com.mmk.kmpnotifier.notification.NotifierManager
@@ -28,9 +26,3 @@ class MainActivity : ComponentActivity() {
         NotifierManager.onCreateOrOnNewIntent(intent)
     }
 }
-//
-//@Preview
-//@Composable
-//fun AppAndroidPreview() {
-//    AppMain()
-//}

@@ -7,4 +7,6 @@
     <string name = "email" >Email</string>
     <string name = "bio" >Bio</string>
     <string name = "update" >Update</string>
+    <string name="en">English</string>
+    <string name="ar">العربية</string>
 </resources>

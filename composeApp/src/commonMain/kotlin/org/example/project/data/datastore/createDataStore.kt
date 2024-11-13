@@ -14,9 +14,12 @@ fun createDataStore(producePath: () -> String): DataStore<Preferences> {
     )
 }
 
+
 internal const val DATA_STORE_FILE_NAME = "prefs.preferences_pb"
 internal const val DATA_STORE_PROFILE = "profile_key"
+internal const val DATA_STORE_LANG = "lang_key"
 
 object PreferencesKeys {
     val profileKeys = stringPreferencesKey(DATA_STORE_PROFILE)
+    val langKeys = stringPreferencesKey(DATA_STORE_LANG)
 }

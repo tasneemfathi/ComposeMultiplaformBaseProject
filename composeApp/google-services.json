@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "65049453962",
-    "project_id": "cmpbaseapp",
-    "storage_bucket": "cmpbaseapp.appspot.com"
+    "project_number": "933741660559",
+    "project_id": "bedaatiteam-e4496",
+    "storage_bucket": "bedaatiteam-e4496.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:65049453962:android:9d386783e2bccb96b59473",
+        "mobilesdk_app_id": "1:933741660559:android:0e472a3ab1bee98771a3fa",
         "android_client_info": {
-          "package_name": "org.example.project"
+          "package_name": "com.bedaati.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "933741660559-6d4e95d0qa7c24opuj0nad73vubd8nsr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyDYkihsKpl8ybuJFd3F6fJSiKLa3YoIomI"
+          "current_key": "AIzaSyB973oBOoCwycetzKNLgT9X-uvCNkgnGJc"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933741660559-6d4e95d0qa7c24opuj0nad73vubd8nsr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "933741660559-9k8j2sg62quk6rpbvi75ncvcgnfrpbrm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.bedaati",
+                "app_store_id": "6443647998"
+              }
+            }
+          ]
         }
       }
     }

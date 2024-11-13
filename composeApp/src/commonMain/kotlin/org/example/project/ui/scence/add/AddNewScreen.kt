@@ -1,4 +1,4 @@
-package org.example.project.scence.add
+package org.example.project.ui.scence.add
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -50,11 +50,8 @@ import org.example.project.ui.core.MyAppTopBar
 import org.example.project.ui.core.MyTextField
 import org.example.project.ui.theme.DynamicPrimary
 import org.example.project.utils.byteArrayToBase64
-import org.example.project.utils.collectAsMutableState
-import org.example.project.utils.decodeBase64ToImageBitmap
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import org.koin.compose.viewmodel.koinViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -63,18 +60,14 @@ fun AddNewScreen(viewModel: AddNewViewModel, navUp:() -> Unit){
     val name by viewModel.name.collectAsState()
     val email by viewModel.email.collectAsState()
     val bio by viewModel.bio.collectAsState()
-    val avatar by viewModel.avatar.collectAsState()
     val image by viewModel.image.collectAsState()
-
     val scope = rememberCoroutineScope()
-
     val resizeOptions = ResizeOptions(
-        width = 500, // Custom width
-        height = 500, // Custom height
-        resizeThresholdBytes = 2 * 1024 * 1024L, // Custom threshold for 2MB,
-        compressionQuality = 0.5 // Adjust compression quality (0.0 to 1.0)
+        width = 500,
+        height = 500,
+        resizeThresholdBytes = 2 * 1024 * 1024L,
+        compressionQuality = 0.5
     )
-
     val singleImagePicker = rememberImagePickerLauncher(
         selectionMode = SelectionMode.Single,
         scope = scope,
@@ -87,6 +80,7 @@ fun AddNewScreen(viewModel: AddNewViewModel, navUp:() -> Unit){
             }
         }
     )
+
 
     Scaffold (topBar = {MyAppTopBar(titleRes = Res.string.users_title, showNavIcon = true, navUp = navUp)}){
         Column (modifier = Modifier.padding(it).padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(10.dp), horizontalAlignment = Alignment.CenterHorizontally){

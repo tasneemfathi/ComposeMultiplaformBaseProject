@@ -11,19 +11,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import org.example.project.utils.handleInAppLaunchedNotificationActions
 
 
 @Composable
 fun NavigationHost(){
     val navController: NavHostController = rememberNavController()
-
+    val startDestination: Destinations = Destinations.StartScreen
+    handleInAppLaunchedNotificationActions(navController)
     Box(modifier = Modifier.fillMaxSize()){
         Scaffold(
             containerColor = Color.White) {
             Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(it)) {
-                NavHostGraph(navController = navController, startDestination = Destinations.StartScreen)
+                NavHostGraph(navController = navController, startDestination = startDestination)
             }
         }
     }
 
 }
+

@@ -54,6 +54,10 @@ kotlin {
 
             // Networking with Ktor
             implementation(libs.ktor.client.okhttp)
+
+            // Notification Handling
+            implementation(libs.firebase.messaging.ktx)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -110,7 +114,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "org.example.project"
+        applicationId = "com.bedaati.app"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -138,5 +142,7 @@ android {
         implementation(libs.ui.tooling.preview)
         debugImplementation(compose.uiTooling)
     }
+
 }
+
 

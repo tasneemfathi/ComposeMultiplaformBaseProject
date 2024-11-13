@@ -9,9 +9,6 @@ compose-plugin = "1.7.0"
 kotlin = "2.0.20"
 google-services = "4.4.0"
 
-# Androidx Compose
-compose-bom = "2024.09.02"
-
 
 # Android Specific Libraries
 android-accompanist = "0.36.0"
@@ -40,18 +37,15 @@ peekaboo = "0.5.2"
 
 #Notificaton
 kmpnotifier = "1.3.0"
+firebaseMessagingKtx = "24.0.3"
 
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
-#compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
 kmpnotifier = { module = "io.github.mirzemehdi:kmpnotifier", version.ref = "kmpnotifier" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
-#ui = { group = "androidx.compose.ui", name = "ui" }
-#animation = { group = "androidx.compose.animation", name = "animation" }
-#androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 
@@ -96,6 +90,7 @@ kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-j
 
 #Peekaboo
 peekaboo-image-picker = { module = "io.github.onseok:peekaboo-image-picker", version.ref = "peekaboo" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
 
 
 [plugins]
@@ -122,12 +117,3 @@ coil = [
     "coil-network-ktor",
     "coil-mp",
 ]
-#compose = [
-#    "compose-bom",
-#    "material3",
-#    "ui",
-#    "animation",
-#    "androidx-ui-graphics",
-#    "ui-tooling",
-#    "androidx-ui-graphics",
-#]

@@ -33,10 +33,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             Messaging.messaging().apnsToken = deviceToken
       }
 
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
-         NotifierManager.shared.onApplicationDidReceiveRemoteNotification(userInfo: userInfo)
-         return UIBackgroundFetchResult.newData
-    }
+      func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
+             NotifierManager.shared.onApplicationDidReceiveRemoteNotification(userInfo: userInfo)
+             return UIBackgroundFetchResult.newData
+      }
 
 
 }

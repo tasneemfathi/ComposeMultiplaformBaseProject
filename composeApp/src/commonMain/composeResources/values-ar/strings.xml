@@ -1,0 +1,12 @@
+<resources>
+    <string name = "welcome_static_text" >مرحبا هيا بنا نبدأ... </string>
+    <string name = "users_title" >المستخدمين</string>
+    <string name = "for_more_info" >للمزيد من المعلومات</string>
+    <string name = "scan_qr" >فحص الكود</string>
+    <string name = "name" >الاسم</string>
+    <string name = "email" >الايميل</string>
+    <string name = "bio" >الملخص</string>
+    <string name = "update" >تحديث</string>
+    <string name="en">English</string>
+    <string name="ar">العربية</string>
+</resources>

@@ -1,4 +1,4 @@
-package org.example.project.scence.users
+package org.example.project.ui.scence.users
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

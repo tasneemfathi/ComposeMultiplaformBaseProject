@@ -1,4 +1,4 @@
-package org.example.project.scence.add
+package org.example.project.ui.scence.add
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.ImageBitmap
