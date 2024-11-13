@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -36,6 +37,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.mmk.kmpnotifier.notification.NotifierManager
 import com.mmk.kmpnotifier.notification.PayloadData
 import composemultiplatformlabproject.composeapp.generated.resources.Res
+import composemultiplatformlabproject.composeapp.generated.resources.ic_language
 import composemultiplatformlabproject.composeapp.generated.resources.users_title
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -47,6 +49,7 @@ import org.example.project.ui.core.MyAppTopBar
 import org.example.project.ui.theme.DynamicTextColor
 import org.example.project.utils.changeAppLocaleToArabic
 import org.example.project.utils.changeAppLocaleToEnglish
+import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,9 +80,9 @@ fun StartScreen(viewModel: UserViewModel, handleNotificationActions:() -> Unit, 
         MyAppTopBar(titleRes = Res.string.users_title, actions = {
             Row (modifier = Modifier, horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically){
                 Icon(painter = rememberVectorPainter(Icons.Default.Add), contentDescription = "Add New", modifier = Modifier.clickable { navigateToAddNew() }, tint = DynamicTextColor)
-                Icon(painter = rememberVectorPainter(Icons.Default.Refresh), contentDescription = "SwitchLanguage", modifier = Modifier.clickable {
+                Icon(painter = painterResource(Res.drawable.ic_language), contentDescription = "SwitchLanguage", modifier = Modifier.clickable {
                     switchLanguage(appLang.value == "ar",viewModel)
-                }, tint = DynamicTextColor)
+                }.size(28.dp), tint = DynamicTextColor)
 
             }
         })
