@@ -49,6 +49,7 @@ import org.example.project.ui.core.MyAppTopBar
 import org.example.project.ui.theme.DynamicTextColor
 import org.example.project.utils.changeAppLocaleToArabic
 import org.example.project.utils.changeAppLocaleToEnglish
+import org.example.project.utils.switchAppLang
 import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -81,7 +82,7 @@ fun StartScreen(viewModel: UserViewModel, handleNotificationActions:() -> Unit, 
             Row (modifier = Modifier, horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically){
                 Icon(painter = rememberVectorPainter(Icons.Default.Add), contentDescription = "Add New", modifier = Modifier.clickable { navigateToAddNew() }, tint = DynamicTextColor)
                 Icon(painter = painterResource(Res.drawable.ic_language), contentDescription = "SwitchLanguage", modifier = Modifier.clickable {
-                    switchLanguage(appLang.value == "ar",viewModel)
+                    switchAppLang(appLang, { viewModel.updateAppLang(it) })
                 }.size(28.dp), tint = DynamicTextColor)
 
             }
