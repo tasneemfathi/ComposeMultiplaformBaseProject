@@ -1,14 +1,14 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# 📱 Compose Multiplatform Testing Base
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+A personal testing ground for experimenting with essential features and best practices in Compose Multiplatform for **Android** and **iOS**. This project serves as a foundational base to streamline new project setups, explore new technology, and test integrations with Compose UI, KMM libraries, and Kotlin Multiplatform capabilities.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## 🌟 Features
 
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+- **Compose UI**: Unified, native UI for Android and iOS 🖼️
+- **Navigation**: Simplified with native Compose Navigation 🧭
+- **Dependency Injection**: Powered by [Koin](https://insert-koin.io/) for modular architecture 🔗
+- **Networking**: [Ktor](https://ktor.io/) for seamless networking requests 🌐
+- **Async Image Loading**: [Coil](https://coil-kt.github.io/coil/) for efficient image loading 📸
+- **Local Data Storage**: [Datastore](https://developer.android.com/topic/libraries/architecture/datastore) for persistent local data 💾
+- **Image Picker**: Integrated with [Peekaboo](https://github.com/onseok/peekaboo) library for smooth image selection 📂
+- **Notifications**: [KMP-Notifier](https://github.com/mirzemehdi/KMPNotifier) for cross-platform notifications 🔔
